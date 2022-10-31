@@ -1,0 +1,33 @@
+.create-question{
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+}
+.create-question input{
+    padding: 5px 10px;
+    font-size: 20px;
+    margin: 10px 0px;
+    margin-right: 10px;
+}
+.question{
+    min-width: 600px;
+}
+label{
+    font-size: 16px;
+    color: #4e4b4b;
+}
+.option{
+    width: 150px;
+}
+.answer{
+    width: 200px;
+}
+.create-question button{
+    font-size: 18px;
+    background-color: #059862;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 20px;
+}
+
+
