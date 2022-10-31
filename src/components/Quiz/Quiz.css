@@ -1,0 +1,13 @@
+
+.ques{
+    padding: 10px 120px;
+}
+.ques h2{
+    padding-bottom: 20px;
+}
+.ques input{
+    margin-right: 5px;
+}
+.ques label{
+    margin-right: 20px;
+}

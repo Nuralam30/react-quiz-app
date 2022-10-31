@@ -27,17 +27,17 @@ const CreateQuestion = () => {
         }
         const allQuestions = [...questions, newQuestion]
         setQuestions(allQuestions);
-        setCreatedQuestions(allQuestions);
-
-        quesRef.current.value = '';
-        opt1Ref.current.value = '';
-        opt2Ref.current.value = '';
-        opt3Ref.current.value = '';
-        opt4Ref.current.value = '';
-        ansRef.current.value = '';
+        setCreatedQuestions(allQuestions)
 
         console.log(questions)
         e.preventDefault()
+        
+        // quesRef.current.value = '';
+        // opt1Ref.current.value = '';
+        // opt2Ref.current.value = '';
+        // opt3Ref.current.value = '';
+        // opt4Ref.current.value = '';
+        // ansRef.current.value = '';
     }
     return (
         <div className='create-question'>
