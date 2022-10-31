@@ -25,6 +25,14 @@ const CreateQuestion = () => {
         const allQuestions = [...questions, newQuestion]
         setQuestions(allQuestions);
         console.log(questions)
+
+        quesRef.current.value = '';
+        opt1Ref.current.value = '';
+        opt2Ref.current.value = '';
+        opt3Ref.current.value = '';
+        opt4Ref.current.value = '';
+        ansRef.current.value = '';
+
         e.preventDefault()
     }
     return (
