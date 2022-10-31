@@ -1,9 +1,12 @@
-import React, { useRef, useState } from 'react';
+import React, { useContext, useRef, useState } from 'react';
+import { QuizContext } from '../../App';
 import './CreateQuestion.css';
 
 const CreateQuestion = () => {
 
     const [questions, setQuestions] = useState([]);
+    const [createdQuestions, setCreatedQuestions] = useContext(QuizContext);
+
     const quesRef = useRef();
     const opt1Ref = useRef();
     const opt2Ref = useRef();
@@ -24,7 +27,7 @@ const CreateQuestion = () => {
         }
         const allQuestions = [...questions, newQuestion]
         setQuestions(allQuestions);
-        console.log(questions)
+        setCreatedQuestions(allQuestions);
 
         quesRef.current.value = '';
         opt1Ref.current.value = '';
@@ -33,6 +36,7 @@ const CreateQuestion = () => {
         opt4Ref.current.value = '';
         ansRef.current.value = '';
 
+        console.log(questions)
         e.preventDefault()
     }
     return (

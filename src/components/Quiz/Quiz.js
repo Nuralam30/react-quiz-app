@@ -1,10 +1,31 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { QuizContext } from '../../App';
 import './Quiz.css';
 
 const Quiz = () => {
+
+    const [createdQuestions, setCreatedQuestions] = useContext(QuizContext);
+
+
     return (
         <div className='quiz'>
-            <h3>This is quiz</h3>
+            {
+                createdQuestions.map(qu => createdQuestions && 
+                <div className='ques' key={qu.id}> 
+                    <h2>{qu.ques}</h2>
+                    <input type="radio" id="option1" name="option" value={qu.opt1} />
+                    <label for="option1">{qu.opt1}</label>
+
+                    <input type="radio" id="option1" name="option" value={qu.opt2} />
+                    <label for="option1">{qu.opt2}</label>
+
+                    <input type="radio" id="option1" name="option" value={qu.opt3} />
+                    <label for="option1">{qu.opt3}</label>
+
+                    <input type="radio" id="option1" name="option" value={qu.opt4} />
+                    <label for="option1">{qu.opt4}</label><br/>
+                </div>)
+            }
         </div>
     );
 };
